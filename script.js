@@ -27,11 +27,7 @@ async function singleUser(id) {
         <p>Phone: ${userData.phone}</p>
         <p>Website: ${userData.website}</p>
       `;
-      const backButton = document.createElement("button");
-      backButton.textContent = "Back";
-      backButton.addEventListener("click", () => {
-        window.location.href = "index.html";
-      });
+     
     } else {
       console.log("Failed to fetch user.");
     }
@@ -61,6 +57,7 @@ async function fetchUsers() {
             <p>Email: ${user.email}</p>
             <p>Address: ${user.address.street}, ${user.address.city}</p>
             <button onclick="viewSingleUser(${user.id})">View User</button>
+            
           </div>
         `;
         userCard.append(card);
@@ -73,8 +70,12 @@ async function fetchUsers() {
   }
 }
 
-// Redirect to view a single user's details
+
 function viewSingleUser(id) {
   window.location.href = `userDetail.html?id=${id}`;
+}
+
+function goBack() {
+  window.history.back(); // This will go back to the previous page in history
 }
 
