@@ -24,8 +24,7 @@ async function singleUser(id) {
         <h5>Username: ${userData.username}</h5>
         <p>Email: ${userData.email}</p>
         <p>Address: ${userData.address.street}, ${userData.address.city}</p>
-        <p>Phone: ${userData.phone}</p>
-        <p>Website: ${userData.website}</p>
+        
       `;
      
     } else {
